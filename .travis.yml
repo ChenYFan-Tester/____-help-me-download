@@ -11,7 +11,7 @@ script:
   - cd download
   - mkdir re
   - cd re
-  - curl -O "https://github.com/Molunerfinn/PicGo/archive/v2.3.0-beta.3.zip"
+  - curl -O "https://codeload.github.com/Molunerfinn/PicGo/zip/v2.3.0-beta.3"
   - cd ..
   - tar cjf - re/ |split -b 20m - dl.tar.bz2.
   - echo "copy /b dl.tar.bz2.* dl.tar.bz2" > end.bat
