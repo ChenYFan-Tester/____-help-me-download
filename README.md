@@ -82,7 +82,8 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 
 # Todo：
 
-- [ ] 编写GithubAction版本
+- [x] 编写GithubAction版本
+- [ ] 编写Coding版本
 
 # 关于
 
