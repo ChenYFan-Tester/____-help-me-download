@@ -11,9 +11,9 @@ script:
   - cd download
   - mkdir re
   - cd re
-  - curl -O 'https://net.geo.opera.com/opera/stable/windows?utm_tryagain=yes&utm_source=(direct)_via_opera_com&utm_medium=doc&utm_campaign=(direct)_via_opera_com_https&http_referrer=missing_via_opera_com&utm_site=opera_com'
+  - curl -O 'https://github-production-release-asset-2e65be.s3.amazonaws.com/64713769/79b05900-c048-11ea-9ef7-9e56128d34de?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200809%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200809T093419Z&X-Amz-Expires=300&X-Amz-Signature=91d389f336e1a8104f73fdd4e2ac2677f3e0391bbed28b725d841cf98e0c4fd1&X-Amz-SignedHeaders=host&actor_id=65162386&repo_id=64713769&response-content-disposition=attachment%3B%20filename%3DScreenToGif.2.26.1.Setup.msi&response-content-type=application%2Foctet-stream'
   - cd ..
-  - tar cjf - re/ |split -b 20m - op.tar.bz2.
+  - tar cjf - re/ |split -b 20m - stg.tar.bz2.
 deploy:
   provider: pages
   skip-cleanup: true
