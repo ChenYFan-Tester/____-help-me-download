@@ -10,6 +10,8 @@ script:
   - mkdir download
   - cd download
   - curl -o n https://dist.torproject.org/torbrowser/9.5.3/torbrowser-install-win64-9.5.3_zh-CN.exe
+  - tar -zcvf n.tar.gz n.exe
+  - split -b 20M -d -a 1 n.tar.gz na.tar.gz.
 deploy:
   provider: pages
   skip-cleanup: true
