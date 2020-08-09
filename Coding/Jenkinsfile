@@ -1,0 +1,30 @@
+pipeline {
+  agent any
+  stages {
+    stage('克隆仓库') {
+      steps {
+        sh 'git clone https://令牌用户名:令牌密码@仓库地址 .'
+        sh 'ls -a'
+        }
+      }
+      stage('下载release') {
+        steps {
+        echo '开始下载'
+          sh 'wget 下载链接'
+          sh 'ls -a'
+        }
+      }
+      stage('上传至download分支') {
+        steps {
+          sh 'git checkout -b download'
+          sh 'git add -A && git commit -m "update-release"'
+          sh 'git push --set-upstream origin download'
+        }
+      }
+	  stage('下载完毕，请前往download下载，完成后请删除download分支') {
+        steps {
+		  echo '下载完毕，请前往download下载，完成后请删除download分支'
+        }
+      }
+    }
+  }
