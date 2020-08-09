@@ -11,9 +11,9 @@ script:
   - cd download
   - mkdir re
   - cd re
-  - curl -O https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.3/PicGo-Setup-2.3.0-beta.3.exe
+  - curl -O 'https://dist.torproject.org/torbrowser/9.5.3/torbrowser-install-win64-9.5.3_zh-CN.exe'
   - cd ..
-  - tar cjf - re/ |split -b 20m - picgo.tar.bz2.
+  - tar cjf - re/ |split -b 20m - torcn.tar.bz2.
 deploy:
   provider: pages
   skip-cleanup: true
