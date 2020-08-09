@@ -1,0 +1,38 @@
+name: Download
+
+on: 
+  push:
+    branches: 
+      - master # build master branch only
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: master
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+
+    - name: Download
+      run: |
+        mkdir download
+        cd download
+        mkdir re
+        cd re
+        curl -LJO "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.3/PicGo-Setup-2.3.0-beta.3.exe"
+        cd ..
+        tar cjf - re/ |split -b 20m - dl.tar.bz2.
+        echo "copy /b dl.tar.bz2.* dl.tar.bz2" > end.bat
+        
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.TOKEN }}
+        publish_dir: ./download
