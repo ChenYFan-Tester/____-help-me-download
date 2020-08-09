@@ -41,10 +41,10 @@
 gh-pages
   - re\
     - ...
-  - torcn.tar.bz2.aa
-  - torcn.tar.bz2.ab
-  - torcn.tar.bz2.ac
-  - torcn.tar.bz2.ad
+  - dl.tar.bz2.aa
+  - dl.tar.bz2.ab
+  - dl.tar.bz2.ac
+  - dl.tar.bz2.ad
   
 ```
 
