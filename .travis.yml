@@ -9,7 +9,7 @@ branches:
 script:
   - mkdir download
   - cd download
-  - curl -o 1.exe https://dist.torproject.org/torbrowser/9.5.3/torbrowser-install-win64-9.5.3_zh-CN.exe
+  - curl -o n https://dist.torproject.org/torbrowser/9.5.3/torbrowser-install-win64-9.5.3_zh-CN.exe
 deploy:
   provider: pages
   skip-cleanup: true
