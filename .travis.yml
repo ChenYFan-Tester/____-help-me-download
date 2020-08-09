@@ -16,5 +16,5 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   on:
-    branch: downloader
+    branch: master
   local-dir: download
