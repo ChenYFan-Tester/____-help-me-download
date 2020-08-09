@@ -1,4 +1,4 @@
-# @Travis-CI,你帮我下载文件行吗QvQ
+# @Travis-CI && @GithubAction,你帮我下载文件行吗QvQ
 
 ## 前言
 
@@ -89,6 +89,8 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 travis-ci集成部署，通过curl下载、tar打包、split切块、git部署至Github、jsdelivr加速下载、windows下copy命令合并。
 
 此脚本可以下载任意直链文件，包括但不限于Github，但是**请勿滥用**。
+
+同样支持GithubAction部署，原理类似，请自行更改
 
 # 许可
 
