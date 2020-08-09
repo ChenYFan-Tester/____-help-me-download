@@ -56,8 +56,8 @@ https://cdn.jsdelivr.net/gh/用户名/仓库名字@gh-pages/分块名字
 以本仓库为例，下载以下所有链接：
 
 ```
-https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/dlar.bz2.aa
-https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/dlar.bz2.ab
+https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/dl.tar.bz2.aa
+https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/dl.tar.bz2.ab
 https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/dl.tar.bz2.ac
 https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/dl.tar.bz2.ad
 https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/end.bat
