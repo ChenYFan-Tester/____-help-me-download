@@ -9,9 +9,11 @@ branches:
 script:
   - mkdir download
   - cd download
-  - curl -o n https://dist.torproject.org/torbrowser/9.5.3/torbrowser-install-win64-9.5.3_zh-CN.exe
-  - tar -zcvf n.tar.gz n.exe
-  - split -b 20M -d -a 1 n.tar.gz na.tar.gz.
+  - mkdir cm-11
+  - cd cm-11
+  - curl -o cm-11 https://dist.torproject.org/torbrowser/9.5.3/torbrowser-install-win64-9.5.3_zh-CN.exe
+  - cd ..
+  - tar -zcvf cm-11.tar.gz cm-11 | split -b 4000M -d -a 1 - cm-11.tar.gz.
 deploy:
   provider: pages
   skip-cleanup: true
