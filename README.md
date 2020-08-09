@@ -75,9 +75,14 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 
 # 已知的问题：
 
-- [ ] 下载Release时可能会下载到Github默认的跳转页面【此时为一个html】
-  - 暂时解决方法：用记事本打开下载的文件，复制跳转链接，用双引号包裹该链接下载
-  - 注意：建议直接下载Source打包，避免跳转至亚马逊云【亚马逊云链接有特殊字符】
+- [x] 下载Release时可能会下载到Github默认的跳转页面【此时为一个html】
+  - ~~暂时解决方法：用记事本打开下载的文件，复制跳转链接，用双引号包裹该链接下载~~
+  - ~~注意：建议直接下载Source打包，避免跳转至亚马逊云【亚马逊云链接有特殊字符】~~
+  - 已修复，采用-L支持重定向
+
+# Todo：
+
+- [ ] 编写GithubAction版本
 
 # 关于
 
