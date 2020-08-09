@@ -21,11 +21,28 @@
 
 第一次配置
 
-1. 先Star该仓库~~【可选】~~
+1. 先Star该仓库 ~~【可选】~~
 2. Fork此仓库
 3. 修改 `.travis.yml` 14行单引号括起来的链接地址，将其设置为你所需要下载的链接。
 
 > **注意，其中不得包含特殊字符如\&**
+
+> 实际上我可以把它写在travis-ci的变量里，可以避免公布下载链接，但是个人测试，github访问速度比travis-ci快多了，而且travis-ci登陆还是要Github...
+
+4. 进入你的Github个人资料，(https://github.com/settings/tokens)[新建一个token] ，权限至少repo读写、profile读【建议全勾】，生成token并复制，妥善保管。
+
+5. 进入 <https://travis-ci.org> 或 <https://travis-ci.com>，用github账号登入，进入dashboard-setting，设置环境变量：变量名字: `GH_TOKEN` ，变量值: 你生成的TOKEN，tigger此项目。
+
+6. 大约一分钟，这个项目就会变绿，如果没有，请检查日志；成功后进入仓库，选择 `gh-pages` 分支，你大概会看到以下文件：
+
+```
+gh-pages
+  - re\
+    - ...
+  - 
+```
+
+
 
 [没写完，留坑]
 
