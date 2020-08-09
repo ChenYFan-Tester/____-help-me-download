@@ -13,7 +13,7 @@ script:
   - cd dl
   - curl -o t.exe https://dist.torproject.org/torbrowser/9.5.3/torbrowser-install-win64-9.5.3_zh-CN.exe
   - cd ..
-  - tar cjf - dl/ |split -b 10m - dl.tar.bz2.
+  - tar cjf - dl/ |split -d 20m - dl.tar.bz2.
 deploy:
   provider: pages
   skip-cleanup: true
