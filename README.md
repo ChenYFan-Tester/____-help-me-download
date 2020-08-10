@@ -83,7 +83,28 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 # Todo：
 
 - [x] 编写GithubAction版本
-- [ ] 编写Coding版本
+- [x] 编写Coding版本
+- [ ] Netlify支持
+- [ ] Heroku支持
+- [ ] Vercel支持
+
+
+# Coding部署版-感谢[Colsrch](https://github.com/Colsrch)
+
+## 配置方法
+
+1. 前往Coding新建一个仓库
+2. 将 `/Coding` 中的`Jenkinsfile`文件写入仓库，文件名不变
+3. 新建构建计划，选择自定义构建计划，选择代码库为Coding，选择该仓库，配置来源选择`使用代码库中的Jenkinsfile`，节点池选择`硅谷-美国`。
+4. 修改触发规则为推送到master自动执行。
+
+## 食用方法
+
+1. 修改仓库Jenkinsfile文件中的克隆地址为该仓库地址，注意要申请个令牌哦。
+2. 修改需要下载的下载链接
+3. 保存就可以啦，然后就会自动开始下载。
+3. 最后前往`download`分支下载你所需的这个文件就可以了，别忘了下载完成后删除download分支哦。
+
 
 # 关于
 
