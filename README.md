@@ -89,7 +89,9 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 - [ ] Vercel支持
 
 
-# Coding部署版-感谢[Colsrch](https://github.com/Colsrch)
+# Coding部署版
+
+感谢[Colsrch](https://github.com/Colsrch) 提供Coding版本及readme
 
 ## 配置方法
 
