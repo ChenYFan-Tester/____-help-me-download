@@ -1,16 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('克隆仓库') {
+    stage('克隆项目') {
       steps {
-        sh 'git clone https://令牌用户名:令牌密码@仓库地址 .'
-        sh 'ls -a'
+        sh 'git clone https://${CODING_KEY}@e.coding.net/jxsfgz-cat/github-release-download/github-release-download.git .'
         }
       }
       stage('下载release') {
         steps {
-        echo '开始下载'
-          sh 'wget 下载链接'
+          sh 'wget --no-check-certificate --content-disposition https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.3/PicGo-Setup-2.3.0-beta.3.exe'
           sh 'ls -a'
         }
       }
@@ -21,9 +19,9 @@ pipeline {
           sh 'git push --set-upstream origin download'
         }
       }
-	  stage('下载完毕，请前往download下载，完成后请删除download分支') {
+      stage('下载完毕，请前往download下载，完成后请删除download分支') {
         steps {
-		  echo '下载完毕，请前往download下载，完成后请删除download分支'
+          echo '下载完毕，请前往download下载，完成后请删除download分支'
         }
       }
     }
