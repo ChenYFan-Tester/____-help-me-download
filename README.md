@@ -96,11 +96,12 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 ## 配置方法
 
 1. 新建一个仓库
-2. 将本文件夹中的`Jenkinsfile`文件写入仓库，文件名不变
-3. 新建构建计划，选择自定义构建计划，选择代码库为Coding，选择该仓库，配置来源选择`使用代码库中的Jenkinsfile`，节点池选择`硅谷-美国`。
+2. 将 `/Coding` 文件夹中的`Jenkinsfile`文件写入仓库，文件名不变
+3. 新建构建计划，选择自定义构建计划，选择代码库为Coding，选择该仓库，配置来源选择 `使用代码库中的Jenkinsfile` ，节点池选择 `硅谷-美国`。
 4. 修改触发规则为推送到master自动执行。
 
 ## 食用方法
+
 1. 申请一个令牌
 2. 添加默认字符串变量`CODING_KEY`变量内容为：`令牌用户名:令牌密钥`
 3. 修改仓库Jenkinsfile文件中的克隆地址为该仓库地址。
