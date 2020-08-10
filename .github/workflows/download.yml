@@ -25,6 +25,7 @@ jobs:
         cd ..
         tar cjf - re/ |split -b 20m - dl.tar.bz2.
         echo "copy /b dl.tar.bz2.* dl.tar.bz2" > end.bat
+        rm -rf re/
         
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
