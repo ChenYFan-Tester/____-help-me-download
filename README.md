@@ -20,7 +20,9 @@
 
 ## 开始
 
-### 第一次配置
+### Travis-CI
+
+#### 第一次配置
 
 1. 先Star该仓库 ~~【可选】~~
 2. Fork此仓库
@@ -66,12 +68,38 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 
 剪切以下文件至新建文件夹，运行 `end.bat` 合并所有分块，解压 `dl.tar.bz2` 即可
 
-## 以后...
+### 以后...
 
 1. 改 `.travis.yml` 14行单引号括起来的链接地址，将其设置为你所需要下载的链接。
 2. 为绕开jsdelivr缓存，请修改16行、17行默认的名字 `dl`【可选】
 3. 进入github，gh-pages分支等待一分钟即可
 
+## Coding部署版
+
+感谢[Colsrch](https://github.com/Colsrch) 提供Coding版本及readme
+
+### 配置方法
+
+1. 新建一个仓库
+2. 将 `/Coding` 文件夹中的`Jenkinsfile`文件写入仓库，文件名不变
+3. 新建构建计划，选择自定义构建计划，选择代码库为Coding，选择该仓库，配置来源选择 `使用代码库中的Jenkinsfile` ，节点池选择 `硅谷-美国`。
+4. 修改触发规则为推送到master自动执行。
+
+### 食用方法
+
+1. 申请一个令牌
+2. 添加默认字符串变量`CODING_KEY`变量内容为：`令牌用户名:令牌密钥`
+3. 修改仓库Jenkinsfile文件中的克隆地址为该仓库地址。
+4. 修改需要下载的下载链接
+5. 保存就可以啦，然后就会自动开始下载。
+6. 最后前往`download`分支下载你所需的这个文件就可以了，别忘了下载完成后删除download分支哦。
+7. 之后食用直接修改下载链接即可，别忘了每次下载完成后要删除download分支哦
+
+## Github-Action版本
+
+感谢[Flexiston](https://github.com/Flexiston),同样支持GithubAction部署，原理类似，请自行更改。
+
+默认使用travis-ci部署，若用GithubAction请将workflew的yml中 `_master` 改为 `master`,并设置俩变量TOKEN和LINK，TOKEN即GithubTOKEN，LINK为下载链接
 
 # 已知的问题：
 
@@ -86,29 +114,9 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 - [x] 编写Coding版本
 - [ ] Netlify支持
 - [ ] Heroku支持
-- [ ] Vercel支持
+- [x] Vercel支持
 
 
-# Coding部署版
-
-感谢[Colsrch](https://github.com/Colsrch) 提供Coding版本及readme
-
-## 配置方法
-
-1. 新建一个仓库
-2. 将 `/Coding` 文件夹中的`Jenkinsfile`文件写入仓库，文件名不变
-3. 新建构建计划，选择自定义构建计划，选择代码库为Coding，选择该仓库，配置来源选择 `使用代码库中的Jenkinsfile` ，节点池选择 `硅谷-美国`。
-4. 修改触发规则为推送到master自动执行。
-
-## 食用方法
-
-1. 申请一个令牌
-2. 添加默认字符串变量`CODING_KEY`变量内容为：`令牌用户名:令牌密钥`
-3. 修改仓库Jenkinsfile文件中的克隆地址为该仓库地址。
-4. 修改需要下载的下载链接
-5. 保存就可以啦，然后就会自动开始下载。
-6. 最后前往`download`分支下载你所需的这个文件就可以了，别忘了下载完成后删除download分支哦。
-7. 之后食用直接修改下载链接即可，别忘了每次下载完成后要删除download分支哦
 
 # 关于
 
@@ -116,11 +124,55 @@ travis-ci集成部署，通过curl下载、tar打包、split切块、git部署�
 
 此脚本可以下载任意直链文件，包括但不限于Github，但是**请勿滥用**。
 
-感谢[Flexiston](https://github.com/Flexiston),同样支持GithubAction部署，原理类似，请自行更改。
-
-默认使用travis-ci部署，若用GithubAction请将workflew的yml中 `_master` 改为 `master`,并设置俩变量TOKEN和LINK，TOKEN即GithubTOKEN，LINK为下载链接
-
 请注意下载完毕后将 `gh-pages` 分支及时删除!否则会产生比较大的commit影响Github!
+
+## jsdelivr条约约束：
+
+根据2020年8月9日[Jsdelivr Create Acceptable Use Policy](https://github.com/jsdelivr/jsdelivr/pull/18247/files) 
+
+其中第4条Prohibited Use：
+
+```
+4. Prohibited Use
+
+The following behavior is prohibited:
+
+ 1. Hosting or accessing content that:
+     - contains malware or harmful code in any form,
+     - violates proprietary rights of others,
+     - is sexually explicit,
+     - is potentially illegal in the EU or the USA.
+
+ 2. Abusing the service and its resources, or using jsDelivr as a general-purpose
+    file or media hosting service. This includes, for example:
+     - running an image hosting website and using jsDelivr as a storage for all
+       uploaded images,
+     - hosting videos, file backups, or other files in large quantities.
+
+    We recognize that there are legitimate projects that consist of a large number
+    of files, and these are not considered abuse. For example: icons packs, apps,
+    or games with a large number of assets.
+
+```
+
+其中第二点明确指出**不得用于大型文件备份**，虽然我们有分块制度，但我个人建议不得下载超过100MB。
+
+第5条Additional Restrictions in China
+
+```
+## 5. Additional Restrictions in China
+
+jsDelivr holds an ICP license issued by the Chinese government,
+which allows us to operate infrastructure directly in Mainland China.
+To keep this license and allow our Chinese users to benefit from the performance
+improvements it provides, any content served via our Chinese network must conform
+to Chinese policies. Content potentially violating Chinese policies may be
+blocked in China without warning.
+```
+
+明确指出使用网宿节点的网民【与居住地点、国籍无关】必须遵守中华人民共和国法律约束，不得用于下载当局明令禁止文件。
+
+由于以上原因导致无法使用jsdelivr服务者，本项目、项目组织、项目创始人均不负责。
 
 # 许可
 
