@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "build": "mkdir download && cd download && curl -LJO "https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.3/PicGo-Setup-2.3.0-beta.3.exe""
-  }
-}
