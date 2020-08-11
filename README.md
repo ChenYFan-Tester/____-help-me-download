@@ -86,7 +86,7 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 - [x] 编写Coding版本
 - [ ] Netlify支持
 - [ ] Heroku支持
-- [ ] Vercel支持
+- [x] Vercel支持
 
 
 # Coding部署版
