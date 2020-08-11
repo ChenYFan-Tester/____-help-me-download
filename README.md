@@ -20,11 +20,11 @@
 
 ## 开始
 
-### Travis-CI
+### Travis-CI（平均53s
 
 #### 第一次配置
 
-1. 先Star该仓库 ~~【可选】~~
+1. Star✨此项目 ~~【可选~~
 2. Fork此仓库
 3. 修改 `.travis.yml` 14行单引号括起来的链接地址，将其设置为你所需要下载的链接。
 
@@ -74,12 +74,15 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 2. 为绕开jsdelivr缓存，请修改16行、17行默认的名字 `dl`【可选】
 3. 进入github，gh-pages分支等待一分钟即可
 
-## Coding部署版
+## Coding部署版（不清楚
+
+> 此方法避免分块麻烦
 
 感谢[Colsrch](https://github.com/Colsrch) 提供Coding版本及readme
 
 ### 配置方法
 
+0. Star✨此项目 ~~【可选~~
 1. 新建一个仓库
 2. 将 `/Coding` 文件夹中的`Jenkinsfile`文件写入仓库，文件名不变
 3. 新建构建计划，选择自定义构建计划，选择代码库为Coding，选择该仓库，配置来源选择 `使用代码库中的Jenkinsfile` ，节点池选择 `硅谷-美国`。
@@ -95,11 +98,24 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 6. 最后前往`download`分支下载你所需的这个文件就可以了，别忘了下载完成后删除download分支哦。
 7. 之后食用直接修改下载链接即可，别忘了每次下载完成后要删除download分支哦
 
-## Github-Action版本
+## Github-Action版本（平均耗时46s
 
 感谢[Flexiston](https://github.com/Flexiston),同样支持GithubAction部署，原理类似，请自行更改。
 
 默认使用travis-ci部署，若用GithubAction请将workflew的yml中 `_master` 改为 `master`,并设置俩变量TOKEN和LINK，TOKEN即GithubTOKEN，LINK为下载链接
+
+## Vercel版本（平均耗时12s
+
+> 目前部署速度最快
+
+> 电信用户强推，电信直连香港亚马逊，避免分块麻烦
+
+1. 首先你有个github账号，用此账号登录[vercel](https://vercel.com) ，并Star✨此项目 ~~【可选~~
+2. Import此项目
+3. 新建一个变量，变量名字为 `LINK` 变量值为下载链接。
+4. Deploy！你会获得一串链接，里面是vercel自带的目录列表程序，点击下载即可
+5. 以后只要修改LINK值并重新部署即可。
+
 
 # 已知的问题：
 
