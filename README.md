@@ -114,7 +114,7 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 2. Import此项目
 3. 新建一个变量，变量名字为 `LINK` 变量值为下载链接。
 4. Deploy！你会获得一串链接，里面是vercel自带的目录列表程序，点击下载即可
-5. 以后只要修改LINK值并重新部署即可。
+5. 以后只要修改LINK值并点击 `redeploy` 重新部署即可。
 
 
 # 已知的问题：
@@ -192,4 +192,4 @@ blocked in China without warning.
 
 # 许可
 
-MIT-
+MIT
