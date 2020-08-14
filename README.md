@@ -80,6 +80,8 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 
 感谢[Colsrch](https://github.com/Colsrch) 提供Coding版本及readme
 
+## 详见Coding仓库：[Coding帮我下个文件](https://jxsfgz-cat.coding.net/public/github-release-download/github-release-download/git/files)
+
 ### 配置方法
 
 0. Star✨此项目 ~~【可选~~
