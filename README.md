@@ -118,6 +118,12 @@ https://cdn.jsdelivr.net/gh/ChenYFan-Tester/travis-ci-help-me-download@gh-pages/
 4. Deploy！你会获得一串链接，里面是vercel自带的目录列表程序，点击下载即可
 5. 以后只要修改LINK值并点击 `redeploy` 重新部署即可。
 
+## Netlify版本（耗时未测量，不过速度很慢
+
+1. [Netlify](https://app.netlify.com/)需要科学上网环境，用Github登录。
+2. 建立新Site，安装Oauth，为保险选择需下载的仓库。
+3. 找到Site的网址，用wget下载整个网站。
+
 
 # 已知的问题：
 
